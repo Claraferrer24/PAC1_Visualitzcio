@@ -7616,9 +7616,9 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/claraferrerrodrig
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="17f771b4-3b95-41a4-a3d4-a88636d48e61" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="1c618dfa-abe8-4c50-9812-3bf85737a0ca" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('17f771b4-3b95-41a4-a3d4-a88636d48e61');
+var element = document.getElementById('1c618dfa-abe8-4c50-9812-3bf85737a0ca');
 (function(root) {
   function now() {
     return new Date();
@@ -7870,9 +7870,9 @@ function(Bokeh) {} // ensure no trailing comma for IE
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="d35626e5-e278-4977-9789-530a653cb7c8" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="8b81095e-178d-4dba-8a30-7435a5cdc150" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('d35626e5-e278-4977-9789-530a653cb7c8');
+var element = document.getElementById('8b81095e-178d-4dba-8a30-7435a5cdc150');
 
 if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
   window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
@@ -8368,10 +8368,11 @@ Successfully installed certifi-2025.10.5 outcome-1.3.0.post0 selenium-4.38.0 sor
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"/Users/claraferrerrodriguez/UOC/Visualitzacio de dades/comtrade_data.csv"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"/Users/claraferrerrodriguez/UOC/Visualitzacio de dades/comtrade_data.csv"</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'reporterISO'</span><span class="p">,</span> <span class="s1">'partnerISO'</span><span class="p">,</span> <span class="s1">'cifvalue'</span><span class="p">]]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'reporterISO'</span><span class="p">:</span> <span class="s1">'source'</span><span class="p">,</span> <span class="s1">'partnerISO'</span><span class="p">:</span> <span class="s1">'target'</span><span class="p">,</span> <span class="s1">'cifvalue'</span><span class="p">:</span> <span class="s1">'value'</span><span class="p">})</span>
 
@@ -8386,8 +8387,9 @@ Successfully installed certifi-2025.10.5 outcome-1.3.0.post0 selenium-4.38.0 sor
     <span class="n">j</span> <span class="o">=</span> <span class="n">countries</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'target'</span><span class="p">])</span>
     <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'value_mil'</span><span class="p">]</span>
 
-
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">"## Exports 2024"</span><span class="p">))</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">ocd</span><span class="o">.</span><span class="n">Chord</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">labels</span><span class="o">=</span><span class="n">countries</span><span class="p">)</span>
+
 <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -8398,10 +8400,30 @@ Successfully installed certifi-2025.10.5 outcome-1.3.0.post0 selenium-4.38.0 sor
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output" data-mime-type="text/markdown" tabindex="0">
+<h2 id="Exports-2024">Exports 2024<a class="anchor-link" href="#Exports-2024">¶</a></h2>
+</div>
+</div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
 <div class="jp-RenderedSVG jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="image/svg+xml" tabindex="0">
-<img alt="No description has been provided for this image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgIHdpZHRoPSI1MDAuMCIgaGVpZ2h0PSI1MDAuMCIgdmlld0JveD0iLTI1MCAtMjUwIDUwMC4wIDUwMC4wIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCB4MT0iMTQ4LjUxNzg5NjgzODM2Njg4IiB5MT0iLTEzMy45NDkzNzIyMjIxNTA0MyIgeDI9Ii0xNDYuODE3NjQ2MzgwODgxODUiIHkyPSIxMzUuODEwODE5NTY1OTYyMTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iSEJGUWYySmMwIj4KPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkZCNkMxIiAvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRkQ3MDAiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCB4MT0iMTQ4LjUxNzg5NjgzODM2Njg4IiB5MT0iLTEzMy45NDkzNzIyMjIxNTA0MyIgeDI9IjEyMy4zNDY0NDMxMzU3NDA2OSIgeTI9IjE1Ny40MzQ2MDUzNjI4NjY0MiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJIQkZRZjJKYzEiPgo8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRkI2QzEiIC8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0ZGQTA3QSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IHgxPSItMTQ2LjgxNzY0NjM4MDg4MTg1IiB5MT0iMTM1LjgxMDgxOTU2NTk2MjE2IiB4Mj0iMTIzLjM0NjQ0MzEzNTc0MDY5IiB5Mj0iMTU3LjQzNDYwNTM2Mjg2NjQyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9IkhCRlFmMkpjMiI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0ZGRDcwMCIgLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRkZBMDdBIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHg9Ii0yNTAiIHk9Ii0yNTAiIHdpZHRoPSI1MDAuMCIgaGVpZ2h0PSI1MDAuMCIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIxLjAiIC8+CjxwYXRoIGQ9Ik0yMDAuMCwtMC4wIEEyMDAsMjAwLDAsMCwwLC04OS45NTA1MjIyNzE4NzQ5MiwtMTc4LjYzMDYzNDM5MTI0MDIyIEwtOTYuMjQ3MDU4ODMwOTA2MTcsLTE5MS4xMzQ3Nzg3OTg2MjcwNSBBMjE0LjAsMjE0LjAsMCwwLDEsMjE0LjAsLTAuMCBaIiBmaWxsPSIjRkZCNkMxIiBmaWxsLW9wYWNpdHk9IjAuOSIgLz4KPHBhdGggZD0iTS05MS43MzIzMDEzNTU1Mjk0MiwtMTc3LjcyMjIxMjcwMjkwOTg3IEEyMDAsMjAwLDAsMCwwLDcuMTg3OTE3OTYyNzM4ODQyLDE5OS44NzA3OTI4NTIxODQ3IEw3LjY5MTA3MjIyMDEzMDU2MiwyMTMuODYxNzQ4MzUxODM3NjYgQTIxNC4wLDIxNC4wLDAsMCwxLC05OC4xNTM1NjI0NTA0MTY0OSwtMTkwLjE2Mjc2NzU5MjExMzU3IFoiIGZpbGw9IiNGRkQ3MDAiIGZpbGwtb3BhY2l0eT0iMC45IiAvPgo8cGF0aCBkPSJNOS4xODYyMzMxODY3MjUyMTQsMTk5Ljc4ODkyMTQxNDE3NDI3IEEyMDAsMjAwLDAsMCwwLDE5OS45OTAwMDAwODMzMzMwNiwxLjk5OTk2NjY2NjgzMzMzOTEgTDIxMy45ODkzMDAwODkxNjY0LDIuMTM5OTY0MzMzNTExNjczIEEyMTQuMCwyMTQuMCwwLDAsMSw5LjgyOTI2OTUwOTc5NTk4LDIxMy43NzQxNDU5MTMxNjY0OCBaIiBmaWxsPSIjRkZBMDdBIiBmaWxsLW9wYWNpdHk9IjAuOSIgLz4KPHBhdGggZD0iTTE0Ny4wMzI3MTc4Njk5ODMyMywtMTMyLjYwOTg3ODQ5OTkyODkzIEExOTguMCwxOTguMCwwLDAsMCwtODkuMDUxMDE3MDQ5MTU2MTcsLTE3Ni44NDQzMjgwNDczMjc4MiBDLTM1LjYyMDQwNjgxOTY2MjQ3LC03MC43Mzc3MzEyMTg5MzExMywtMzYuMzI1OTkxMzM2Nzg5NjUsLTcwLjM3Nzk5NjIzMDM1MjMxLC05MC44MTQ5NzgzNDE5NzQxMSwtMTc1Ljk0NDk5MDU3NTg4MDc4IEExOTguMCwxOTguMCwwLDAsMCwtMTQ1LjM0OTQ2OTkxNzA3MzA0LDEzNC40NTI3MTEzNzAzMDI1MiBDLTU4LjEzOTc4Nzk2NjgyOTIyLDUzLjc4MTA4NDU0ODEyMTAxNSw1OC44MTMwODcxNDc5OTMyOSwtNTMuMDQzOTUxMzk5OTcxNTc2LDE0Ny4wMzI3MTc4Njk5ODMyMywtMTMyLjYwOTg3ODQ5OTkyODkzIFoiIGZpbGw9InVybCgjSEJGUWYySmMwKSIgZmlsbC1vcGFjaXR5PSIwLjYiIC8+CjxwYXRoIGQ9Ik0xOTguMCwtMC4wIEExOTguMCwxOTguMCwwLDAsMCwxNDcuMDMyNzE3ODY5OTgzMjMsLTEzMi42MDk4Nzg0OTk5Mjg5MyBDNTguODEzMDg3MTQ3OTkzMjksLTUzLjA0Mzk1MTM5OTk3MTU3Niw0OC44NDUxOTE0ODE3NTMzMSw2Mi4zNDQxMDM3MjM2OTUxMDYsMTIyLjExMjk3ODcwNDM4MzI3LDE1NS44NjAyNTkzMDkyMzc3NiBBMTk4LjAsMTk4LjAsMCwwLDAsMTk3Ljk5MDEwMDA4MjQ5OTcsMS45Nzk5NjcwMDAxNjUwMDU4IEM3OS4xOTYwNDAwMzI5OTk4OSwwLjc5MTk4NjgwMDA2NjAwMjQsNzkuMiwtMC4wLDE5OC4wLC0wLjAgWiIgZmlsbD0idXJsKCNIQkZRZjJKYzEpIiBmaWxsLW9wYWNpdHk9IjAuNiIgLz4KPHBhdGggZD0iTS0xNDUuMzQ5NDY5OTE3MDczMDQsMTM0LjQ1MjcxMTM3MDMwMjUyIEExOTguMCwxOTguMCwwLDAsMCw3LjExNjAzODc4MzExMTQ1MzUsMTk3Ljg3MjA4NDkyMzY2Mjg3IEMyLjg0NjQxNTUxMzI0NDU4MTQsNzkuMTQ4ODMzOTY5NDY1MTYsMy42Mzc3NDgzNDE5NDMxODU1LDc5LjExNjQxMjg4MDAxMzAyLDkuMDk0MzcwODU0ODU3OTY0LDE5Ny43OTEwMzIyMDAwMzI1MyBBMTk4LjAsMTk4LjAsMCwwLDAsMTIyLjExMjk3ODcwNDM4MzI3LDE1NS44NjAyNTkzMDkyMzc3NiBDNDguODQ1MTkxNDgxNzUzMzEsNjIuMzQ0MTAzNzIzNjk1MTA2LC01OC4xMzk3ODc5NjY4MjkyMiw1My43ODEwODQ1NDgxMjEwMTUsLTE0NS4zNDk0Njk5MTcwNzMwNCwxMzQuNDUyNzExMzcwMzAyNTIgWiIgZmlsbD0idXJsKCNIQkZRZjJKYzIpIiBmaWxsLW9wYWNpdHk9IjAuNiIgLz4KPHRleHQgeD0iMjIwLjAwMDAwMDAwMDAwMDAzIiB5PSIwIiBmb250LXNpemU9IjEwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRyYW5zZm9ybT0icm90YXRlKC01OC4zNjM5MDYpIiBmb250LWZhbWlseT0iQXJpYWwiPkZyYW5jZTwvdGV4dD4KPHRleHQgeD0iLTIyMC4wMDAwMDAwMDAwMDAwNiIgeT0iMCIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9ImVuZCIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE0LjY4MDIwMSkiIGZvbnQtZmFtaWx5PSJBcmlhbCI+R2VybWFueTwvdGV4dD4KPHRleHQgeD0iMjIwLjAwMDAwMDAwMDAwMDAzIiB5PSIwIiBmb250LXNpemU9IjEwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRyYW5zZm9ybT0icm90YXRlKC0zMTYuMDI5ODE1KSIgZm9udC1mYW1pbHk9IkFyaWFsIj5TcGFpbjwvdGV4dD4KPC9zdmc+"/>
+<img alt="No description has been provided for this image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgIHdpZHRoPSI1MDAuMCIgaGVpZ2h0PSI1MDAuMCIgdmlld0JveD0iLTI1MCAtMjUwIDUwMC4wIDUwMC4wIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCB4MT0iMTQ4LjUxNzg5NjgzODM2Njg4IiB5MT0iLTEzMy45NDkzNzIyMjIxNTA0MyIgeDI9Ii0xNDYuODE3NjQ2MzgwODgxODUiIHkyPSIxMzUuODEwODE5NTY1OTYyMTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0idzNVSlN1TUcwIj4KPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjRkZCNkMxIiAvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRkQ3MDAiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCB4MT0iMTQ4LjUxNzg5NjgzODM2Njg4IiB5MT0iLTEzMy45NDkzNzIyMjIxNTA0MyIgeDI9IjEyMy4zNDY0NDMxMzU3NDA2OSIgeTI9IjE1Ny40MzQ2MDUzNjI4NjY0MiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJ3M1VKU3VNRzEiPgo8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRkI2QzEiIC8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0ZGQTA3QSIgLz4KPC9saW5lYXJHcmFkaWVudD4KPGxpbmVhckdyYWRpZW50IHgxPSItMTQ2LjgxNzY0NjM4MDg4MTg1IiB5MT0iMTM1LjgxMDgxOTU2NTk2MjE2IiB4Mj0iMTIzLjM0NjQ0MzEzNTc0MDY5IiB5Mj0iMTU3LjQzNDYwNTM2Mjg2NjQyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9InczVUpTdU1HMiI+CjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0ZGRDcwMCIgLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRkZBMDdBIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHg9Ii0yNTAiIHk9Ii0yNTAiIHdpZHRoPSI1MDAuMCIgaGVpZ2h0PSI1MDAuMCIgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIxLjAiIC8+CjxwYXRoIGQ9Ik0yMDAuMCwtMC4wIEEyMDAsMjAwLDAsMCwwLC04OS45NTA1MjIyNzE4NzQ5MiwtMTc4LjYzMDYzNDM5MTI0MDIyIEwtOTYuMjQ3MDU4ODMwOTA2MTcsLTE5MS4xMzQ3Nzg3OTg2MjcwNSBBMjE0LjAsMjE0LjAsMCwwLDEsMjE0LjAsLTAuMCBaIiBmaWxsPSIjRkZCNkMxIiBmaWxsLW9wYWNpdHk9IjAuOSIgLz4KPHBhdGggZD0iTS05MS43MzIzMDEzNTU1Mjk0MiwtMTc3LjcyMjIxMjcwMjkwOTg3IEEyMDAsMjAwLDAsMCwwLDcuMTg3OTE3OTYyNzM4ODQyLDE5OS44NzA3OTI4NTIxODQ3IEw3LjY5MTA3MjIyMDEzMDU2MiwyMTMuODYxNzQ4MzUxODM3NjYgQTIxNC4wLDIxNC4wLDAsMCwxLC05OC4xNTM1NjI0NTA0MTY0OSwtMTkwLjE2Mjc2NzU5MjExMzU3IFoiIGZpbGw9IiNGRkQ3MDAiIGZpbGwtb3BhY2l0eT0iMC45IiAvPgo8cGF0aCBkPSJNOS4xODYyMzMxODY3MjUyMTQsMTk5Ljc4ODkyMTQxNDE3NDI3IEEyMDAsMjAwLDAsMCwwLDE5OS45OTAwMDAwODMzMzMwNiwxLjk5OTk2NjY2NjgzMzMzOTEgTDIxMy45ODkzMDAwODkxNjY0LDIuMTM5OTY0MzMzNTExNjczIEEyMTQuMCwyMTQuMCwwLDAsMSw5LjgyOTI2OTUwOTc5NTk4LDIxMy43NzQxNDU5MTMxNjY0OCBaIiBmaWxsPSIjRkZBMDdBIiBmaWxsLW9wYWNpdHk9IjAuOSIgLz4KPHBhdGggZD0iTTE0Ny4wMzI3MTc4Njk5ODMyMywtMTMyLjYwOTg3ODQ5OTkyODkzIEExOTguMCwxOTguMCwwLDAsMCwtODkuMDUxMDE3MDQ5MTU2MTcsLTE3Ni44NDQzMjgwNDczMjc4MiBDLTM1LjYyMDQwNjgxOTY2MjQ3LC03MC43Mzc3MzEyMTg5MzExMywtMzYuMzI1OTkxMzM2Nzg5NjUsLTcwLjM3Nzk5NjIzMDM1MjMxLC05MC44MTQ5NzgzNDE5NzQxMSwtMTc1Ljk0NDk5MDU3NTg4MDc4IEExOTguMCwxOTguMCwwLDAsMCwtMTQ1LjM0OTQ2OTkxNzA3MzA0LDEzNC40NTI3MTEzNzAzMDI1MiBDLTU4LjEzOTc4Nzk2NjgyOTIyLDUzLjc4MTA4NDU0ODEyMTAxNSw1OC44MTMwODcxNDc5OTMyOSwtNTMuMDQzOTUxMzk5OTcxNTc2LDE0Ny4wMzI3MTc4Njk5ODMyMywtMTMyLjYwOTg3ODQ5OTkyODkzIFoiIGZpbGw9InVybCgjdzNVSlN1TUcwKSIgZmlsbC1vcGFjaXR5PSIwLjYiIC8+CjxwYXRoIGQ9Ik0xOTguMCwtMC4wIEExOTguMCwxOTguMCwwLDAsMCwxNDcuMDMyNzE3ODY5OTgzMjMsLTEzMi42MDk4Nzg0OTk5Mjg5MyBDNTguODEzMDg3MTQ3OTkzMjksLTUzLjA0Mzk1MTM5OTk3MTU3Niw0OC44NDUxOTE0ODE3NTMzMSw2Mi4zNDQxMDM3MjM2OTUxMDYsMTIyLjExMjk3ODcwNDM4MzI3LDE1NS44NjAyNTkzMDkyMzc3NiBBMTk4LjAsMTk4LjAsMCwwLDAsMTk3Ljk5MDEwMDA4MjQ5OTcsMS45Nzk5NjcwMDAxNjUwMDU4IEM3OS4xOTYwNDAwMzI5OTk4OSwwLjc5MTk4NjgwMDA2NjAwMjQsNzkuMiwtMC4wLDE5OC4wLC0wLjAgWiIgZmlsbD0idXJsKCN3M1VKU3VNRzEpIiBmaWxsLW9wYWNpdHk9IjAuNiIgLz4KPHBhdGggZD0iTS0xNDUuMzQ5NDY5OTE3MDczMDQsMTM0LjQ1MjcxMTM3MDMwMjUyIEExOTguMCwxOTguMCwwLDAsMCw3LjExNjAzODc4MzExMTQ1MzUsMTk3Ljg3MjA4NDkyMzY2Mjg3IEMyLjg0NjQxNTUxMzI0NDU4MTQsNzkuMTQ4ODMzOTY5NDY1MTYsMy42Mzc3NDgzNDE5NDMxODU1LDc5LjExNjQxMjg4MDAxMzAyLDkuMDk0MzcwODU0ODU3OTY0LDE5Ny43OTEwMzIyMDAwMzI1MyBBMTk4LjAsMTk4LjAsMCwwLDAsMTIyLjExMjk3ODcwNDM4MzI3LDE1NS44NjAyNTkzMDkyMzc3NiBDNDguODQ1MTkxNDgxNzUzMzEsNjIuMzQ0MTAzNzIzNjk1MTA2LC01OC4xMzk3ODc5NjY4MjkyMiw1My43ODEwODQ1NDgxMjEwMTUsLTE0NS4zNDk0Njk5MTcwNzMwNCwxMzQuNDUyNzExMzcwMzAyNTIgWiIgZmlsbD0idXJsKCN3M1VKU3VNRzIpIiBmaWxsLW9wYWNpdHk9IjAuNiIgLz4KPHRleHQgeD0iMjIwLjAwMDAwMDAwMDAwMDAzIiB5PSIwIiBmb250LXNpemU9IjEwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRyYW5zZm9ybT0icm90YXRlKC01OC4zNjM5MDYpIiBmb250LWZhbWlseT0iQXJpYWwiPkZyYW5jZTwvdGV4dD4KPHRleHQgeD0iLTIyMC4wMDAwMDAwMDAwMDAwNiIgeT0iMCIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9ImVuZCIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE0LjY4MDIwMSkiIGZvbnQtZmFtaWx5PSJBcmlhbCI+R2VybWFueTwvdGV4dD4KPHRleHQgeD0iMjIwLjAwMDAwMDAwMDAwMDAzIiB5PSIwIiBmb250LXNpemU9IjEwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRyYW5zZm9ybT0icm90YXRlKC0zMTYuMDI5ODE1KSIgZm9udC1mYW1pbHk9IkFyaWFsIj5TcGFpbjwvdGV4dD4KPC9zdmc+"/>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e2fee587-4232-4646-be7e-284b74f2f1df">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 </div>
 </div>
 </div>
